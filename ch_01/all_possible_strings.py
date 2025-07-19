@@ -22,10 +22,10 @@ def generate_combinations(s, path="", results=None):
         results.add(path)
 
     # Iterate through each character in the string
-    for i, word in enumerate(s):
+    for i, char in enumerate(s):
         # Recurse with the remaining characters excluding the current one
         # Add the current character to the path
-        generate_combinations(s[:i] + s[i+1:], path + word, results)
+        generate_combinations(s[:i] + s[i+1:], path + char, results)
 
     return results
 
